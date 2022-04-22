@@ -1,0 +1,2 @@
+# Mod
+ $i = 1 to 12     ConsoleWrite(_DaysInMonth($i,2000)&amp;@CRLF) Next   Func _DaysInMonth ($iMonth,$iYear)     return 28 + Mod($iMonth + Floor($iMonth / 8), 2) + Mod(2, $iMonth) + Floor((2 - Mod(Mod($iYear, 4) * (Mod($iYear, 100) + Mod($iYear, 400)) + 2, (Mod($iYear, 4) * (Mod($iYear, 100) + Mod($iYear, 400)) + 1))) / $iMonth) + Floor(1/$iMonth) - Floor((1 - Mod((Mod($iYear, 4) * (Mod($iYear, 100) + Mod($iYear, 400)) + 2), (Mod($iYear, 4) * (Mod($iYear, 100) + Mod($iYear, 400)) + 1)))/$iMonth) EndFunc
